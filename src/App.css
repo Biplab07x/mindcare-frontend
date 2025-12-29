@@ -1,0 +1,508 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding:0;
+}
+
+.app-container {
+  min-height: 100vh;
+  /* width:100vw; */
+  background: linear-gradient(135deg, #6dd5ed, #2193b0);
+  display: grid;
+  place-items: center;
+  justify-content: center;
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+  scrollbar-gutter:stable;
+}
+
+.card {
+  background: white;
+  width: 380px;
+  max-width: 90%;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  margin: 0;
+  transform: translateX(4px);
+}
+
+h1 {
+  font-size:30px;
+  margin-bottom: 10px;
+  color: #073d3e;
+}
+
+.subtitle {
+  color:#245f66;
+  font-size: 20px;
+  margin-bottom: 26px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2193b0;
+}
+
+button {
+  background: #2193b0;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #176d87;
+}
+
+button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.toggle-text{
+  margin-top:12px;
+  font-size:14px;
+  cursor:pointer;
+}
+
+.togglr-text b{
+  color:#2bb0c8;
+}
+/* RESULT BOX */
+.result {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.lowrisk {
+  background: #e7f9ed;
+  color: #2e7d32;
+}
+
+.mediumrisk {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.highrisk {
+  background: #fdecea;
+  color: #b71c1c;
+}
+
+.helpline {
+  font-weight: bold;
+  margin-top: 8px;
+}
+.risk {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.risk.HIGH\ RISK {
+  color: #d32f2f
+  font-weight 700;
+}
+
+.risk.MEDIUM\ RISK {
+  color: #f57c00;
+  font-weight:700;
+}
+
+.risk.LOW\ RISK {
+  color: #388e3c;
+  font-weight:700;
+}
+.mood-face {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+/* 🔒 Fix login card layout */
+.card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.card input {
+  width: 100%;
+}
+
+.card button {
+  width: 100%;
+  margin-top: 10px;
+}
+/* 🔒 AUTH FIX — prevents double card issue */
+.auth-box {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* Hide second-layer illusion */
+.card::after {
+  display: none;
+}
+
+/* Ensure only ONE card shows */
+.card {
+  position: relative;
+  overflow: hidden;
+}
+.card-header{ 
+  border-radius:20px;
+}
+.logout-btn {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+
+  background: white;
+  color: #2193b0;
+  border: 1px solid #2193b0;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.logout-btn:hover {
+  background: #2193b0;
+  color: white;
+}
+.card {
+  position: relative;
+}
+.option-card {
+  border: 2px solid #ddd;
+  padding: 14px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin:10px 0;
+  margin-bottom: 10px;
+  transition:all 0.25s ease;
+  background:#ffffff;
+}
+
+.option-card.selected {
+  border-color: #0d6efd;
+  background-color: #e8f0ff;
+}
+
+.check {
+  float: right;
+  font-weight: bold;
+  color: #0d6efd;
+}
+.option-card.selected {
+  background:linear-gradient(135deg,#2196f3,#1976d2);   /* main highlight color */
+  color: white;
+  border-color: #1976d2;
+  box-shadow: 0 6px 16px rgba(10, 109, 124, 0.35);
+}
+
+/* Optional hover effect */
+.option-card:hover {
+  background: #e3f2fd;
+  border-color: #2196f3;
+  transform: scale(1.02);
+}
+
+.helpline-box {
+  margin-top: 24px;
+  padding: 18px;
+  background-color: #ffe5e5;
+  border-left: 6px solid #ff4d4d;
+  border-radius: 10px;
+  text-align:left;
+}
+.primary-btn {
+  margin-top: 20px;
+  padding: 14px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #2196f3, #1976d2);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(229, 7, 211, 0.4);
+}
+.primary-btn:active {
+  transform: scale(0.97);
+}
+.primary-btn.disabled {
+  background: #b0bec5;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+.fade-in {
+  animation: fadeSlide 0.6s ease forwards;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.emoji {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.bounce {
+  animation: bounce 1s ease;
+}
+
+@keyframes bounce {
+  0% { transform: scale(0.5); }
+  60% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+.top-left-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: white;
+  color: #008c99;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  z-index: 1000;
+}
+.top-actions {
+  position: fixed;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+.more-container {
+  position: relative;
+}
+
+.more-dropdown {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  background: white;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+.more-dropdown div {
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.more-dropdown div:hover {
+  background: #f0f9fa;
+}
+
+
+
+
+
+/* Dashboard Layout */
+.dashboard-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.dashboard-card {
+  background: #ffffff;
+  width: 360px;
+  padding: 32px 24px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* Text */
+.card-title {
+  margin: 0;
+  font-size: 28px;
+  color: #2a9dad;
+}
+
+.card-subtitle {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.card-question {
+  font-size: 18px;
+  margin-bottom: 22px;
+  color: #222;
+}
+
+/* Buttons */
+.primary-btn,
+.secondary-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.primary-btn {
+  background: #2a9dad;
+  color: white;
+}
+
+.primary-btn:hover {
+  background: #238a98;
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  background: #e6f4f6;
+  color: #2a9dad;
+}
+
+.secondary-btn:hover {
+  background: #d6eef2;
+  transform: translateY(-2px);
+}
+
+
+
+/* Center container */
+.image-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* White card (same as Questions) */
+.image-card {
+  background: #ffffff;
+  width: 420px;
+  padding: 32px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.chat-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.chat-card {
+  width: 420px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.chat-box {
+  height: 260px;
+  overflow-y: auto;
+  margin: 15px 0;
+  padding: 10px;
+  background: #f5f7fa;
+  border-radius: 10px;
+}
+
+.chat-message {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  max-width: 80%;
+}
+
+.chat-message.user {
+  background: #4fb3bf;
+  color: white;
+  margin-left: auto;
+}
+
+.chat-message.bot {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.chat-input-area {
+  display: flex;
+  gap: 8px;
+}
+
+.chat-input-area input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.chat-input-area button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #4fb3bf;
+  color: white;
+  cursor: pointer;
+}

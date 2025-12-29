@@ -1,0 +1,94 @@
+.chat-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
+}
+
+.chat-card {
+  width: 420px;
+  max-width: 95%;
+  padding: 20px;
+  border-radius: 18px;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.chat-title {
+  text-align: center;
+  margin-bottom: 12px;
+  color: #0f4c5c;
+}
+
+.chat-messages {
+  height: 260px;
+  overflow-y: auto;
+  padding: 10px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-bubble {
+  max-width: 80%;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.chat-bubble.user {
+  align-self: flex-end;
+  background: #0f9ba8;
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.chat-bubble.bot {
+  align-self: flex-start;
+  background: #e9f6f7;
+  color: #123;
+  border-bottom-left-radius: 4px;
+}
+
+.chat-input-area {
+  display: flex;
+  gap: 8px;
+}
+
+.chat-input-area input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.chat-input-area button {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  background: #0f9ba8;
+  color: white;
+  cursor: pointer;
+}
+
+.chat-input-area button:hover {
+  background: #0c7f89;
+}
+
+.back-btn {
+  margin-top: 12px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: #dfeff1;
+  cursor: pointer;
+}

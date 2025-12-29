@@ -1,0 +1,67 @@
+.history-page {
+  position: fixed;          
+  inset: 0;                 
+  background:#2193b0;      
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Centered white card */
+.history-card {
+  width: 420px;
+  height: 520px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 18px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Title */
+.history-title {
+  text-align: center;
+  margin: 8px 0 12px;
+}
+
+/* Scroll area */
+.history-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+/* Messages */
+.history-msg {
+  margin-bottom: 8px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.history-msg.user {
+  background: #dff6ff;
+}
+
+.history-msg.bot {
+  background: #f1f1f1;
+}
+
+Empty state
+.empty-text {
+  text-align: center;
+  color: #777;
+  margin-top: 40px;
+} 
+
+/* Back button */
+.back-btn {
+  background: #6ec6ca;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: flex-start;
+}
