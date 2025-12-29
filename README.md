@@ -31,17 +31,17 @@ MindCare acts as a first-level mental health support system. It helps users feel
 
 
 ✨Key Features
-🤖 AI Chatbot
+🤖 AI Chatbot:
 Provides supportive and non-judgmental conversations, allowing users to freely express their emotions and thoughts in a safe environment.
-🕘 Chat History
+🕘 Chat History:
 Stores previous conversations so users can review past interactions, helping with self-reflection and emotional progress tracking.
-👨‍⚕️ Doctors Section
+👨‍⚕️ Doctors Section:
 Displays information about verified mental health professionals, enabling users to seek expert guidance when required.
-💊 Medical Stores Section
+💊 Medical Stores Section:
 Provides details of nearby or relevant medical stores to help users access prescribed medicines and mental health resources easily.
-🔐 Authentication System
+🔐 Authentication System:
 Implements secure user login and registration using Firebase Authentication, ensuring data privacy and account safety.
-🎨 User-Friendly UI
+🎨 User-Friendly UI:
 Designed with a calm color palette and fully responsive layout to create a stress-free, accessible, and smooth user experience across devices.
 
 
@@ -58,37 +58,37 @@ Designed with a calm color palette and fully responsive layout to create a stres
 
 
 
-🏗️ System Architecture & Workflow
+🏗️ System Architecture & Workflow:
 🔄 Workflow Explanation:
-    1. User Authentication
+    1. User Authentication:
        The user logs in or signs up securely using Firebase Authentication, ensuring data privacy and authorized access.
 
 
-     2. Dashboard Loading
+     2. Dashboard Loading:
         After successful login, the React-based frontend loads the user dashboard and initializes all components.
 
 
-      3. User–Chatbot Interaction
+      3. User–Chatbot Interaction:
           The user interacts with the AI chatbot by entering messages related to their emotional or mental health concerns.
 
 
-       4. Frontend to Backend Communication
+       4. Frontend to Backend Communication:
           The frontend sends user messages as API requests to the backend server for processing.
 
 
-       5.  Backend Processing
+       5.  Backend Processing:
           The backend handles the request, processes the input using AI/NLP logic, and generates an appropriate response.
 
 
-     6. Response Delivery
+     6. Response Delivery:
         The processed response is sent back to the frontend and displayed to the user in real time.
 
 
-      7. Chat History Management
+      7. Chat History Management:
          All conversations are securely stored and retrieved, allowing users to view their chat history for self-reflection.
 
 
-      8.  Doctors & Medical Stores Display
+      8.  Doctors & Medical Stores Display:
          Information about mental health professionals and medical stores is fetched  from predefined data sources and shown in dedicated sections.
          
 🖥️Architecture Overview:
