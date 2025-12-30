@@ -66,7 +66,8 @@ http://localhost:3000
 🎥 Demo Video
 
 👉 Demo Video Link:
-(Add your demo video link here)
+https://youtube.com/@teamshakti-p3v?si=-q0GeEewI0qSo6ol
+
 📄 Documentation
 
 Detailed project documentation is available here:
