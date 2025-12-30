@@ -85,7 +85,7 @@ export default function AIChatbot({ onBack, chatHistory, setChatHistory }) {
     }
   }, []);
 
-  const handleSend = () => {
+  const handleSend = async () => {
   if (!input.trim()) return;
 
   const msg = input.toLowerCase();
@@ -246,14 +246,39 @@ export default function AIChatbot({ onBack, chatHistory, setChatHistory }) {
     reply =
       'I hear you. When you say "${input}", what does that mean for you emotionally?';
   }
+// ==========================
+// FALLBACK → BACKEND API
+// ==========================
+else {
+  try {
+    const response = await fetch(
+      "https://mindcare-backend-nbij.onrender.com/chat",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          message: input
+        })
+      }
+    );
+
+    const data = await response.json();
+    reply = data.reply || "I'm here with you. Tell me more 🤍";
+
+  } catch (error) {
+    reply = "Sorry, I'm having trouble connecting right now 💙";
+  }
+}
 
   // =========================
   // UPDATE CHAT
   // =========================
   setChatHistory((prev) => [
     ...prev,
-    { sender: "user", text: input },
-    { sender: "bot", text: reply },
+    { role: "user", text: input },
+    { role: "bot", text: reply },
   ]);
 
   setInput("");
