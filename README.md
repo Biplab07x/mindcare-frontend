@@ -70,7 +70,7 @@ http://localhost:3000
 📄 Documentation
 
 Detailed project documentation is available here:
-👉 https://docs.google.com/document/d/1ZxVS-F0kf2y-HxpHp7GodHFMbr4cEtryaaHhgKRo76A/edit?usp=sharing
+👉 https://docs.google.com/document/d/1e-Jk-q9QeDDqK6nX8if4L79TZdvyfwec9n8ePHxU-T4/edit?usp=sharing
 
 🔗 Backend Repository
 Backend code for this project is available here:
