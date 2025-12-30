@@ -249,7 +249,7 @@ export default function AIChatbot({ onBack, chatHistory, setChatHistory }) {
 // ==========================
 // FALLBACK → BACKEND API
 // ==========================
-else {
+if(reply ==""){
   try {
     const response = await fetch(
       "https://mindcare-backend-nbij.onrender.com/chat",
